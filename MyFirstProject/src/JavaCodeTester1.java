@@ -15,6 +15,12 @@ public class JavaCodeTester1 {
         char charVariableTest = '#';
         System.out.println(charVariableTest);
 
+        // Concatenating strings variables at Java              
+        String stringTest1 = "String1"; 
+        String stringTest2 = "String2";
+        System.out.println(stringTest1 + stringTest2);
+
+
 
     }
 }
