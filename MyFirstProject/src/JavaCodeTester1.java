@@ -1,7 +1,7 @@
 /**	Application Purpose: Become familiar with basic operations on Java language  
 *	Author: Felipe Cayres
 *	Date: Jan 18th, 2023
-*	Time: 08:50
+*	Time: 13:00
 */
 
 public class JavaCodeTester1 {
