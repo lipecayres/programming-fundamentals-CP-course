@@ -11,6 +11,10 @@ public class JavaCodeTester1 {
         boolean booleanVariableTest = false; 
         System.out.println(booleanVariableTest);
 
+        // Creating first char variable        
+        char charVariableTest = '#';
+        System.out.println(charVariableTest);
+
 
     }
 }
