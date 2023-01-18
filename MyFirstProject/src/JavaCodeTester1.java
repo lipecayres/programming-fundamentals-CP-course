@@ -1,4 +1,4 @@
-/**	Application Purpose: Become familiar with basic operations on Java language  
+/**	Application Purpose: Challenge 1 - Become familiar with basic operations on Java  
 *	Author: Felipe Cayres
 *	Date: Jan 18th, 2023
 *	Time: 13:00
