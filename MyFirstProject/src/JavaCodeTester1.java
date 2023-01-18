@@ -24,6 +24,9 @@ public class JavaCodeTester1 {
         int integerTest = 0;
         System.out.println(integerTest);
 
+        // Creating first char variable              
+        double doubleTest = 0.0;
+        System.out.println(doubleTest);
 
 
     }
