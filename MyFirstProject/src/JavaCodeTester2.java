@@ -15,7 +15,7 @@ public class JavaCodeTester2 {                  // Step 1 - declaration called J
         String stringsConcatenate = stringTest1 + stringTest2 + stringTest3;   // Step 5 - Concatenate the three Strings 
 
         System.out.println(stringsConcatenate.charAt(2) + " " + stringsConcatenate.charAt(4) + " " + stringsConcatenate.charAt(6));
-        System.out.println(" These are the 3rd, 5th and 7th character of the concatenated string!");   // Step 6 - Display the 3rd and 5th and 7th character + message.
+        System.out.println("These are the 3rd, 5th and 7th character of the concatenated string!");   // Step 6 - Display the 3rd and 5th and 7th character + message.
 
         System.out.println(stringsConcatenate.startsWith("test"));      // Step 7 - Display the Boolean value (start with "test"?)
 
