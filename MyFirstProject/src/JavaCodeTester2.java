@@ -18,6 +18,9 @@ public class JavaCodeTester2 {                  // Step 1 - declaration called J
 
         System.out.println(stringsConcatenate.startsWith("test"));      // Step 7 - Display the Boolean value (start with "test"?)
 
+        System.out.println(stringsConcatenate.toUpperCase());       // Step 8 - display string in all upper case letters
+
+        int integerTest1 = 0;               // Step 9 - Store an integer value in a variable
 
 
 
