@@ -22,6 +22,10 @@ public class JavaCodeTester2 {                  // Step 1 - declaration called J
 
         int integerTest1 = 0;               // Step 9 - Store an integer value in a variable
 
+        System.out.println(integerTest1);           //
+        System.out.println(++integerTest1);         // Step 10 - Use the increment operator to display the value of the variable 
+        System.out.println(integerTest1);           //      (Increment before)
+
 
 
         }
