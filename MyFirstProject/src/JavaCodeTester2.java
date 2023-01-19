@@ -31,7 +31,14 @@ public class JavaCodeTester2 {                  // Step 1 - declaration called J
         System.out.println(integerTest1++);         //      (increment after)
         System.out.println(integerTest1);           //
 
+        // Question - What did you notice about the print outs?
 
+        /* When we place the increment operator before the variable, it's gonna add a number before showing at the display.
+         * This way we are available to see the incremented number at first following occurrence.
+         *  
+         * But when we place the increment operator after the variable, the sum is gonna happen after the number showing
+         * at the display. So, we just are available to see the incremented number at the second following occurrence. 
+        */
 
         }
 }
