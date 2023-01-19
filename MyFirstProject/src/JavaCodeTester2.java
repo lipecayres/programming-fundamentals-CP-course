@@ -45,7 +45,7 @@ public class JavaCodeTester2 {                  // Step 1 - declaration called J
 
     int numberTest = 15;        // Step 1 - store an integer value in a variable 
 
-    if (numberTest % 2 == 0){
+    if (numberTest % 2 == 0){           // Step 2 - modulus operator to determine if is even or odd
         System.out.println("The number is even");
     } else {
         System.out.println("The number is odd");
