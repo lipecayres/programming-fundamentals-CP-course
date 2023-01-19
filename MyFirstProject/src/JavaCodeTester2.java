@@ -4,7 +4,8 @@
 *	Time: 11 PM
 */
 
-    
+    // Challenge 2
+
 public class JavaCodeTester2 {                  // Step 1 - declaration called JavaCodeTester1  
     public static void main(String[]args) {     // Step 2 and 3 - main method
         String stringTest1 = "String1";         //    
@@ -40,5 +41,16 @@ public class JavaCodeTester2 {                  // Step 1 - declaration called J
          * at the display. So, we just are available to see the incremented number at the second following occurrence. 
         */
 
+    // Challenge 3
+
+    int numberTest = 15;        // Step 1 - store an integer value in a variable 
+
+    if (numberTest % 2 == 0){
+        System.out.println("The number is even");
+    } else {
+        System.out.println("The number is odd");
+    }
+
         }
 }
+    
