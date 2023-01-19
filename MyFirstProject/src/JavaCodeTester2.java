@@ -4,7 +4,10 @@
 *	Time: 11 PM
 */
 
-public class JavaCodeTester2 {
-    public static void main(String[]args) {
+    
+public class JavaCodeTester2 {                  // Step 1 - declaration called JavaCodeTester1  
+    public static void main(String[]args) {     // Step 2 and 3 - main method
+        
+
         }
 }
