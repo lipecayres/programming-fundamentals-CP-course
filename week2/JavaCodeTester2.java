@@ -28,9 +28,9 @@ public class JavaCodeTester2 {                  // Step 1 - declaration called J
         System.out.println(integerTest1);           //      (Increment before)
 
         int integerTest2 = 0;                       //  
-        System.out.println(integerTest1);           // Step 11 - Use the increment operator to display the value of the same variable
-        System.out.println(integerTest1++);         //      (increment after)
-        System.out.println(integerTest1);           //
+        System.out.println(integerTest2);           // Step 11 - Use the increment operator to display the value of the same variable
+        System.out.println(integerTest2++);         //      (increment after)
+        System.out.println(integerTest2);           //
 
         // Question - What did you notice about the print outs?
 
