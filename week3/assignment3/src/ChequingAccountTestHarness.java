@@ -1,31 +1,15 @@
-public class StudentRecordTestHardness {
+public class ChequingAccountTestHarness {
     public static void main (String [] args) {
 
-        // First register
-    StudentRecord sr1 = new StudentRecord("Philip Smith", 12345);
-    System.out.println(sr1.getFullName());
-    sr1.setFullName("Philip Smythe");
-    System.out.println(sr1.getFullName());
+        // Challenge 2
 
-    System.out.println("")
+    ChequingAccount account1 = new ChequingAccount("Joe", "Smith", 300.15 , 102030);
+    
+    System.out.println("First Name: " + account1.getFirstName());
+    System.out.println("Last Name: " + account1.getLastName());
+    System.out.println("Balance: $" + account1.getBalance());
+    System.out.println("Account Number: " + account1.getAccountNumber());
+    
 
-    System.out.println(sr1.getStudentNumber());
-    sr1.setStudentNumber(12345);
-    System.out.println(sr1.getStudentNumber());
-
-        // Second register
-    StudentRecord sr2 = new StudentRecord();
-
-    System.out.println(sr2.getFullName());
-    sr2.setFullName("Joe");
-    System.out.println(sr2.getFullName());
-
-    System.out.println("")
-
-    System.out.println(sr2.getStudentNumber());
-    sr2.setStudentNumber(23456);
-    System.out.println(sr2.getStudentNumber());
-
-}
-
+    }
 }
