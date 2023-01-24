@@ -1,4 +1,10 @@
-public class StudentRecord {
+/**	Application Purpose: Become familiar with basic operations on Java  
+*	Author: Felipe Cayres
+*	Date: Jan 18th, 2023
+*	Time: 13:00
+*/
+
+public class ChequingAccount {
 
     private String fullName;
     private int studentNumber;
@@ -29,6 +35,12 @@ public class StudentRecord {
     }
 
 
-
+/*
+ *  JAVADOC
+ * 
+ */
+public class StudentRecordTestHardness{
+    
+}
     
 }
