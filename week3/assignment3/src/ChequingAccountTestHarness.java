@@ -4,7 +4,8 @@ public class ChequingAccountTestHarness {
         // Challenge 2
 
     ChequingAccount account1 = new ChequingAccount("Joe", "Smith", 300.15 , 102030);
-    
+
+    System.out.println();    
     System.out.println("Account Informations:");
     System.out.println("--- " + "First Name: " + account1.getFirstName());
     System.out.println("--- " +"Last Name: " + account1.getLastName());
