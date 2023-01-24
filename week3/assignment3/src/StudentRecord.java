@@ -1,11 +1,11 @@
 public class StudentRecord {
 
     private String fullName;
-    private String studentNumber;
+    private int studentNumber;
 
     public StudentRecord () {}
 
-    public StudentRecord (String fullName, String studentNumber){
+    public StudentRecord (String fullName, int studentNumber){
         this.fullName = fullName;
         this.studentNumber = studentNumber;
     }
@@ -24,10 +24,11 @@ public class StudentRecord {
         this.studentNumber = studentNumber;
     }
 
-    public String getStudentNumber () {
+    public int getStudentNumber () {
         return studentNumber;
     }
 
 
 
+    
 }
