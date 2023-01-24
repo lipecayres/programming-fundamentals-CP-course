@@ -6,41 +6,65 @@
 
 public class ChequingAccount {
 
-    private String fullName;
-    private int studentNumber;
+    private String firstName;
+    private String lastName;
+    private double balance;
+    private int accountNumber;
 
-    public StudentRecord () {}
+    public ChequingAccount () {}
 
-    public StudentRecord (String fullName, int studentNumber){
-        this.fullName = fullName;
-        this.studentNumber = studentNumber;
+    public ChequingAccount (String firstName, String lastName, double balance, int accountNumber){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.balance = balance;
+        this.accountNumber=accountNumber;
     }
 
-            // Getters and Setters -> Full Name    
-    public void setFullName (String fullName){
-        this.fullName = fullName;
+        //
+        // Getters and Setters -> First Name
+        //
+
+    public void setFirstName (String firstName){
+        this.firstName = firstName;
     }
 
-    public String getFullName () {
-        return fullName;
+    public String getFirstName () {
+        return firstName;
     }
-
-        // Getters and Setters -> STUDENT NUMBER
-    public void setStudentNumber (int studentNumber){
-        this.studentNumber = studentNumber;
-    }
-
-    public int getStudentNumber () {
-        return studentNumber;
-    }
-
-
-/*
- *  JAVADOC
- * 
- */
-public class StudentRecordTestHardness{
     
-}
+        //
+        // Getters and Setters -> Last Name
+        //
+
+    public void setLastName (String lastName){
+        this.lastName = lastName;
+    }
+
+    public String getLastName () {
+        return lastName;
+    }
+
+        //
+        // Getters and Setters -> Balance
+        //
     
+    public void setBalance (double balance){
+        this.balance = balance;
+    }
+
+    public double getBalance () {
+        return balance;
+    }
+
+        //
+        // Getters and Setters -> Account Number
+        //
+
+    public void setAccountNumber (int accountNumber){
+        this.accountNumber = accountNumber;
+    }
+
+    public int getAccountNumber () {
+        return accountNumber;
+    }
 }
