@@ -1,18 +1,22 @@
-/**	Application Purpose: Become familiar with basic operations on Java  
+/**	Application Purpose: Build class to demonstrate the concepts of instance variables, constructors, setters, getters, and blueprint classes.
 *	Author: Felipe Cayres
-*	Date: Jan 18th, 2023
-*	Time: 13:00
+*	Date: Jan 24th, 2023
+*	Time: 2:23 PM
 */
 
-public class ChequingAccount {
+    // Class declaration
+public class ChequingAccount { 
 
+        // Variables
     private String firstName;
     private String lastName;
     private double balance;
     private int accountNumber;
 
+        // Declaring empty constructor
     public ChequingAccount () {}
 
+        // Behavior - Getters and Setters
     public ChequingAccount (String firstName, String lastName, double balance, int accountNumber){
         this.firstName = firstName;
         this.lastName = lastName;
@@ -20,10 +24,7 @@ public class ChequingAccount {
         this.accountNumber=accountNumber;
     }
 
-        //
-        // Getters and Setters -> First Name
-        //
-
+    // Getters and Setters -> First Name
     public void setFirstName (String firstName){
         this.firstName = firstName;
     }
@@ -31,11 +32,8 @@ public class ChequingAccount {
     public String getFirstName () {
         return firstName;
     }
-    
-        //
-        // Getters and Setters -> Last Name
-        //
 
+    // Getters and Setters -> Last Name
     public void setLastName (String lastName){
         this.lastName = lastName;
     }
@@ -44,10 +42,7 @@ public class ChequingAccount {
         return lastName;
     }
 
-        //
-        // Getters and Setters -> Balance
-        //
-    
+    // Getters and Setters -> Balance
     public void setBalance (double balance){
         this.balance = balance;
     }
@@ -56,10 +51,7 @@ public class ChequingAccount {
         return balance;
     }
 
-        //
-        // Getters and Setters -> Account Number
-        //
-
+    // Getters and Setters -> Account Number
     public void setAccountNumber (int accountNumber){
         this.accountNumber = accountNumber;
     }
