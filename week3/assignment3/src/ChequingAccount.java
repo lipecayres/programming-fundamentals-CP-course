@@ -59,4 +59,10 @@ public class ChequingAccount {
     public int getAccountNumber () {
         return accountNumber;
     }
+
+public void printInfo(){
+    
+}
+
+
 }
