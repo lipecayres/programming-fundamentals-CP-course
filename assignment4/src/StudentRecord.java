@@ -66,7 +66,7 @@ public int getstudentID(){
 
     // method Get Letter grade - Ranked grade A-F
 
-    public char getLetterGrade (int gradeCourseOne){
+    public char getLetterGrade (double gradeCourseOne){
 
         if (gradeCourseOne >=90) {
             return 'A';

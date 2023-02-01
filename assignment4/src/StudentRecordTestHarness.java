@@ -21,6 +21,7 @@ public class StudentRecordTestHarness {           // Class declaration
     System.out.println("--- " +"Last Name: " + sr1.getLastName());
     System.out.println("--- " +"Student ID: " + sr1.getstudentID());
     System.out.println("--- " +"Grade Course One: " + sr1.getgradeCourseOne());
+    System.out.println("--- " +"Letter Grade: " + sr1.getLetterGrade());
     
     System.out.println();       // Jumping line - better visualization
 
