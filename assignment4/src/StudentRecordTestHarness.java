@@ -19,7 +19,7 @@ public class StudentRecordTestHarness {                                         
 
         // Printing on screen account informations
         System.out.println();                                                                      // Jumping line - better visualization
-        System.out.println("Student Record Informations:");                                     
+        System.out.println("Student Record Informations Example:");                                     
         System.out.println("--- " + "First Name: " + sr1.getFirstName());
         System.out.println("--- " +"Last Name: " + sr1.getLastName());
         System.out.println("--- " +"Student ID: " + sr1.getStudentID());
@@ -33,7 +33,8 @@ public class StudentRecordTestHarness {                                         
         //      Step 4 - Instantiate a second student record with no data.
         StudentRecord sr2 = new StudentRecord();
 
-        System.out.println("Registration: ");
+        System.out.print("Registration: \n" + 
+                         "Type here the informations about the new student\n\n");
 
         Scanner sc= new Scanner(System.in); //System.in is a standard input stream  
         
@@ -68,7 +69,6 @@ public class StudentRecordTestHarness {                                         
         System.out.println();                                                                      // Jumping line - better visualization
 
         System.out.println("----------------------------"); 
-
 
         
     }
