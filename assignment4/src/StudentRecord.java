@@ -90,10 +90,10 @@ public int getStudentID(){
 
     public int getVowelCount(){
         int counterVowels = 0;
-        String firstName = firstName.toLowerCase();
+        firstName = firstName.toLowerCase();
 
         for (int i = 0, n=firstName.length() ; i<n; i++){
-            if (firstName[i] == "a" || firstName[i] == "e"|| firstName[i] == "i" || firstName[i] == "o" || firstName[i] == "u") {
+            if (firstName.charAt(i) == 'a' || firstName.charAt(i) == 'e' || firstName.charAt(i) == 'i' || firstName.charAt(i) == 'o' || firstName.charAt(i) == 'u') {
                 counterVowels++;
             }
         }
