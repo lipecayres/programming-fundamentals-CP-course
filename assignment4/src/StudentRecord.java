@@ -37,7 +37,7 @@ public String getFirstName(){
     // Getters and Setters -> Last Name
 
 public void setLastName(String lastName) {
-    this.firstName = lastName;
+    this.lastName = lastName;
 }
 
 public String getLastName() {
@@ -56,33 +56,49 @@ public double getgradeCourseOne() {
 
  // Getters and Setters -> Student ID
 
-public void setstudentID(int studentID) {
+public void setStudentID(int studentID) {
     this.studentID = studentID;
 }
 
-public int getstudentID(){
+public int getStudentID(){
     return studentID;
 }
 
     // method Get Letter grade - Ranked grade A-F
 
-    public char getLetterGrade (double gradeCourseOne){
-
+    public char getLetterGrade (){
+           char x = '#';
         if (gradeCourseOne >=90) {
-            return 'A';
+            x = 'A';
         } else if (gradeCourseOne >=80 && gradeCourseOne <90){
-            return 'B';
+            x = 'B';
         } else if (gradeCourseOne >=70 && gradeCourseOne <80){
-            return 'C';
+            x = 'C';
         } else if (gradeCourseOne >=60 && gradeCourseOne <70){
-            return 'D';
+            x = 'D';
         } else if (gradeCourseOne >=50 && gradeCourseOne <60){
-            return 'E';
+            x = 'E';
         } else if (gradeCourseOne <50){
-            return 'F';
+            x = 'F';
         } else {
-            return '#';
+            x = '#';
         }
+        return x;
     }
+
+    // Method - Vowels counter
+
+    public int getVowelCount(){
+        int counterVowels = 0;
+        String firstName = firstName.toLowerCase();
+
+        for (int i = 0, n=firstName.length() ; i<n; i++){
+            if (firstName[i] == "a" || firstName[i] == "e"|| firstName[i] == "i" || firstName[i] == "o" || firstName[i] == "u") {
+                counterVowels++;
+            }
+        }
+    return counterVowels;
+}
+
 
 }
