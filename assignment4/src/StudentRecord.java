@@ -87,7 +87,12 @@ public class StudentRecord  {
         return gradeLetter;                                                     // Returning the grade letter.
     }
 
-    // Method Get Vowel Count - First name's vowels counter
+
+            //
+            // Challenge 3
+            // 
+
+    // Challenge 3: Step 1 - Add  method getVowelCount to StudentRecord - determine the vowels number in student’s first name   
 
     public int getVowelCount(){
         int counterVowels = 0;                                                  // Set a counter to save the quantity of vowels                                  
