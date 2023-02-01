@@ -33,10 +33,10 @@ public class StudentRecordTestHarness {                                         
         StudentRecord sr2 = new StudentRecord();                
 
         // Step 5 - Ask the user for the data required to fill each field of the record
-        System.out.print("Registration: \n");                                                 // Display appropriate message to user
-        System.out.print("Type here the informations about the new student\n\n")
-        
         Scanner sc= new Scanner(System.in);                                                     // Set new Scanner to input data to system.  
+        
+        System.out.print("Registration: \n");                                                 // Display appropriate message to user
+        System.out.print("Type here the informations about the new student\n\n");
         
                 // Register first name
         System.out.print("Enter First Name: ");                                               // Display appropriate messa to user
@@ -57,7 +57,9 @@ public class StudentRecordTestHarness {                                         
         System.out.print("Enter Student ID: ");                                               // Display appropriate messa to user
         int studentID= sc.nextInt();                                                            // Input to student ID
         sr2.setStudentID(studentID);                                                            // Set method to save typed first name
+        
 
+        // Step 6 - Print out the data, including the letter grade
         System.out.println();                                                                   // Jumping line - better visualization
         System.out.println("Student Record Informations:");                                   // Print title to user - inputed data
         System.out.println("--- " + "First Name: " + sr2.getFirstName());                       // Print first Name
@@ -66,9 +68,50 @@ public class StudentRecordTestHarness {                                         
         System.out.println("--- " +"Grade Course One: " + sr2.getgradeCourseOne());             // Print Grade course ONE
         System.out.println("--- " +"Letter Grade: " + sr2.getLetterGrade());                    // Print Letter Grade
         
-        System.out.println("\n----------------------------");                                // Jumping line  and printing a bar to better visualization
+        System.out.println("----------------------------");                                  // Jumping line  and printing a bar to better visualization
+        System.out.println("----------------------------");                                  // Jumping line  and printing a bar to better visualization
 
-        System.out.println("--- " +"Vowels: " + sr2.getVowelCount());
+                    //
+                    // Challenge 3
+                    //
+
+                    // Step 2 - Add a  final test section
+        System.out.println("Registration: ");                                                
+        System.out.println("Type here the informations about the new student");               // Display appropriate message to user
+        System.out.println("-First name must contain more than 5 letters-");
+        System.out.println();
+                    
+        sr2.setFirstName(sc.nextLine());                                                        // BUG FIX: This line solves a "skip line" problem. When we add this reading, we are able to read first name on next ocurrence. When removed, we won't. 
+    
+                // Register first name
+        System.out.print("Enter First Name (+5 letters): ");                                 // Display appropriate messa to user
+        sr2.setFirstName(sc.nextLine());                                                       // Set method to save typed first name
+    
+                // Register last name
+        System.out.print("Enter Last Name: ");                                               // Display appropriate messa to user
+        sr2.setLastName(sc.nextLine());                                                        // Set method to save typed last name
+
+                // Register Grades
+        System.out.print("Enter Grade: ");                                                   // Display appropriate messa to user
+        sr2.setgradeCourseOne(sc.nextDouble());                                                // Set method to save typed grade course one
+
+                // Register Student ID                
+        System.out.print("Enter Student ID: ");                                              // Display appropriate messa to user
+        sr2.setStudentID(sc.nextInt());                                                        // Set method to save typed first name
         
+
+                // Print out the data, including the letter grade and vowel counter
+        System.out.println();                                                                   // Jumping line - better visualization
+        System.out.println("Student Record Informations:");                                  // Print title to user - inputed data
+        System.out.println("--- " + "First Name: " + sr2.getFirstName());                       // Print first Name
+        System.out.println("--- " +"Last Name: " + sr2.getLastName());                          // Print last Name
+        System.out.println("--- " +"Student ID: " + sr2.getStudentID());                        // Print Student ID
+        System.out.println("--- " +"Grade Course One: " + sr2.getgradeCourseOne());             // Print Grade course ONE
+        System.out.println("--- " +"Letter Grade: " + sr2.getLetterGrade());                    // Print Letter Grade
+        System.out.println("--- " +"Vowels number at first name: " + sr2.getVowelCount());      // Print vowel counter
+        System.out.println("----------------------------");                                  // Jumping line  and printing a bar to better visualization
+
+        sc.close();                                                                             // Close Scanner
+
     }
 }
