@@ -70,6 +70,7 @@ public class StudentRecordTestHarness {                                         
 
         System.out.println("----------------------------"); 
 
+        System.out.println("--- " +"Vowels: " + sr2.getVowelCount());
         
     }
 }
