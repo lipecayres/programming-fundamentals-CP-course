@@ -68,23 +68,23 @@ public class StudentRecord  {
         // Method Get Letter grade - Ranked grade A-F
 
     public char getLetterGrade (){          
-           char gradeLetter = '#';                                              // Variable to save the grade letter 
-        if (gradeCourseOne >=90) {                                              // Condition to grade A
+           char gradeLetter = '#';                                                  // Variable to save the grade letter 
+        if (gradeCourseOne >=90) {                                                  // Condition to grade A
             gradeLetter = 'A';
-        } else if (gradeCourseOne >=80 && gradeCourseOne <90){                  // Condition to grade B
+        } else if (gradeCourseOne >=80 && gradeCourseOne <90){                      // Condition to grade B
             gradeLetter = 'B';
-        } else if (gradeCourseOne >=70 && gradeCourseOne <80){                  // Condition to grade C
+        } else if (gradeCourseOne >=70 && gradeCourseOne <80){                      // Condition to grade C
             gradeLetter = 'C';
-        } else if (gradeCourseOne >=60 && gradeCourseOne <70){                  // Condition to grade D
+        } else if (gradeCourseOne >=60 && gradeCourseOne <70){                      // Condition to grade D
             gradeLetter = 'D';
-        } else if (gradeCourseOne >=50 && gradeCourseOne <60){                  // Condition to grade E
+        } else if (gradeCourseOne >=50 && gradeCourseOne <60){                      // Condition to grade E
             gradeLetter = 'E';
-        } else if (gradeCourseOne <50){                                         // Condition to grade F
+        } else if (gradeCourseOne <50){                                             // Condition to grade F
             gradeLetter = 'F';
         } else {
-            gradeLetter = '#';                                                  // Condition to any other option (default error)
+            gradeLetter = '#';                                                      // Condition to any other option (default error)
         }
-        return gradeLetter;                                                     // Returning the grade letter.
+        return gradeLetter;                                                         // Returning the grade letter.
     }
 
 
@@ -95,17 +95,17 @@ public class StudentRecord  {
     // Challenge 3: Step 1 - Add  method getVowelCount to StudentRecord - determine the vowels number in student’s first name   
 
     public int getVowelCount(){
-        int counterVowels = 0;                                                  // Set a counter to save the quantity of vowels                                  
-        firstName = firstName.toLowerCase();                                    // Converting input to lowercase (validity purpose)
-
-        for (int i = 0, n=firstName.length() ; i<n; i++){                       // Iteraction to check if the letter ia a vowel
+        int counterVowels = 0;                                                      // Set a counter to save the quantity of vowels                                  
+        firstName = firstName.toLowerCase();                                        // Converting input to lowercase (validity purpose)
+        
+        for (int i = 0, n=firstName.length(); i<n; i++){                           // Iteraction to check if the letter ia a vowel
             if (firstName.charAt(i) == 'a' || firstName.charAt(i) == 'e' || 
-                firstName.charAt(i) == 'i' || firstName.charAt(i) == 'o' ||     // Conditions to be a vowel or not
+                firstName.charAt(i) == 'i' || firstName.charAt(i) == 'o' ||         // Conditions to be a vowel or not
                 firstName.charAt(i) == 'u') {
-                    counterVowels++;                                            // Add 1 to each vowel found at iteraction
-            }
-        }
-    return counterVowels;                                                       // Returning the quantity of vowels at first name.
+                    counterVowels++;                                                // Add 1 to each vowel found at iteraction
+            }        
+        } 
+        return counterVowels;                                                       // Returning the quantity of vowels at first name.
     }
 
 
