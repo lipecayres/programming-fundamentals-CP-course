@@ -1,7 +1,7 @@
 /**	Application Purpose: Build the main method to give the JRE an entry point into the program.  
 *	Author: Felipe Cayres
-*	Date: Jan 24th, 2023
-*	Time: 02:43 PM
+*	Date: Feb 1st, 2023
+*	Time: 08:51 PM
 */
 
 // Import statements:
@@ -78,13 +78,13 @@ public class StudentRecordTestHarness {                                         
                     // Step 2 - Add a  final test section
         System.out.println("Registration: ");                                                
         System.out.println("Type here the informations about the new student");               // Display appropriate message to user
-        System.out.println("-First name must contain more than 5 letters-");
+        System.out.println("-First name must contain 5 letters-");
         System.out.println();
                     
         sr2.setFirstName(sc.nextLine());                                                        // BUG FIX: This line solves a "skip line" problem. When we add this reading, we are able to read first name on next ocurrence. When removed, we won't. 
     
                 // Register first name
-        System.out.print("Enter First Name (+5 letters): ");                                 // Display appropriate messa to user
+        System.out.print("Enter First Name (5 letters): ");                                 // Display appropriate messa to user
         sr2.setFirstName(sc.nextLine());                                                       // Set method to save typed first name
     
                 // Register last name
