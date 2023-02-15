@@ -1,42 +1,49 @@
-/**	Application Purpose: Build the main method to give the JRE an entry point into the program.  
+/**	Application Purpose: Build the main method to give the JRE an entry point into the Airline program.  
 *	Author: Felipe Cayres
-*	Date: Feb 1st, 2023
-*	Time: 08:51 PM
+*	Date: Feb 15th, 2023
+*	Time: 1:10 PM
 */
 
 // Import statements:
 import java.util.Scanner;
     
-public class AirlineReservationTestHarness {                                                         // Step 1            Create a second class called AirlineReservation 
+public class AirlineReservationTestHarness {                                                    //Create a second class called AirlineReservation 
     public static void main (String [] args) {                                                  // Main method
         
                     //
                     // Challenge 4
                     //
 
-        // Step 2             Instantiate a AirlineReservation object 
-        AirlineReservation ar1 = new AirlineReservation("Felipe", "Blue", 1020, 3 , 334547);
+        //Instantiate a Airline Reservation object 
+        AirlineReservation ar1 = new AirlineReservation("Jack", "Blue", 1020, 3 , 334547);
 
-        // Step 3             Print out the data, including the letter grade, from this first record.
+        //Print out object state.
         System.out.println();                                                                   // Jumping line - better visualization
         System.out.println("Airline Reservation Informations");                              // Print "example" title to user        
         System.out.println("--- " + "First Name: " + ar1.getFirstName());                       // Print First Name     
         System.out.println("--- " +"Last Name: " + ar1.getLastName());                          // Print Last Name
-        System.out.println("--- " +"Flight Number: " + ar1.getFlightNumber());                  // Print Student ID
-        System.out.println("--- " +"Seat Number: " + ar1.getSeatNumber());                      // Print Grade Letter One
-        System.out.println("--- " +"Ticket Number: " + ar1.getTicketNumber());                  // Print Letter Grade
-        System.out.println("--- " +"Seating Class: " + ar1.retrieveSeatingClass());             // Print Letter Grade
-        System.out.println("--- " +"Segment State: " + ar1.segmentState());                   // Print Letter Grade        
-        
+        System.out.println("--- " +"Flight Number: " + ar1.getFlightNumber());                  // Print Flight Number
+        System.out.println("--- " +"Seat Number: " + ar1.getSeatNumber());                      // Print Seat Number
+        System.out.println("--- " +"Ticket Number: " + ar1.getTicketNumber());                  // Print Ticket Number
+        System.out.println("--- " +"Seating Class: " + ar1.retrieveSeatingClass());             // Print Seating Class
+        System.out.println("--- " +"Segment State: " + ar1.segmentState());                     // Print Segment State       
         System.out.println("\n----------------------------");                                // Jumping line  and printing a bar to better visualization
-        System.out.println("--- " +"No Fly List: " + ar1.checkNoFlyList());
+        System.out.println("--- " +"No Fly List: " + ar1.checkNoFlyList());   
+        
+        if(ar1.checkNoFlyList().contains("9999")) {
+          System.out.println("ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT");    
+        } else {
+          System.out.println("--- OK TO GO!");      
+        }
+
+                  // Print the checking No Fly List
         System.out.println("\n----------------------------");  
 
 
-        // Step 4 - Instantiate a second student record with no data.
+        // Instantiate a second Airline Reservation with no data.
         AirlineReservation ar2 = new AirlineReservation();   
         
-                // Step 5 - Ask the user for the data required to fill each field of the record
+        // Ask the user for the data required to fill each field of the reservation
         Scanner sc= new Scanner(System.in);                                                     // Set new Scanner to input data to system.  
         
         System.out.print("Reservation: \n");                                                 // Display appropriate message to user
@@ -53,9 +60,9 @@ public class AirlineReservationTestHarness {                                    
         ar2.setLastName(lastName);                                                              // Set method to save typed last name
 
                 // Register Flight Number
-        System.out.print("Enter Flight Number: ");                                                    // Display appropriate messa to user
-        int flightNumber= sc.nextInt();                                                 // Input to grade course one
-        ar2.setFlightNumber(flightNumber);                                                  // Set method to save typed grade course one
+        System.out.print("Enter Flight Number: ");                                           // Display appropriate messa to user
+        int flightNumber= sc.nextInt();                                                        // Input to grade course one
+        ar2.setFlightNumber(flightNumber);                                                     // Set method to save typed grade course one
                 
                 // Register Seat Number
         System.out.print("Enter Seat Number: ");                                                    // Display appropriate messa to user
@@ -77,14 +84,15 @@ public class AirlineReservationTestHarness {                                    
         System.out.println("--- " +"Ticket Number: " + ar2.getTicketNumber());                  // Print Letter Grade
         System.out.println("--- " +"Seating Class: " + ar2.retrieveSeatingClass());             // Print Letter Grade
         System.out.println("--- " +"Segment State: " + ar2.segmentState());                   // Print Letter Grade        
-        
         System.out.println("\n----------------------------");                                // Jumping line  and printing a bar to better visualization
-        System.out.println("--- " +"No Fly List: " + ar2.checkNoFlyList());
-        System.out.println("\n----------------------------");  
+        System.out.println("--- " +"No Fly List: " + ar2.checkNoFlyList());   
+        
+        if(ar2.checkNoFlyList().contains("9999")) {
+          System.out.println("ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT");    
+        } else {
+          System.out.println("--- OK TO GO!");      
+        }
 
-
-
-
-
+        sc.close();
   }
 }
