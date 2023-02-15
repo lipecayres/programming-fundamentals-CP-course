@@ -1,10 +1,10 @@
-/**	Application Purpose: Build a blueprint college student record - states and behavior
+/**	Application Purpose: Build a blueprint airline reservation - states and behavior
 *	Author: Felipe Cayres
-*	Date: Jan 31st, 2023
-*	Time: 8:27 PM
+*	Date: Feb 15th, 2023
+*	Time: 12:51 PM
 */
 
-    // Step 1      Create a class called StudentRecord 
+    // Step 1      Create a class called AirlineReservation 
 public class AirlineReservation {                       
 
         // Variables
@@ -29,60 +29,49 @@ public class AirlineReservation {
     }
 
         // Getters and Setters -> First Name
-
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
-
     public String getFirstName(){
         return firstName;
     }
 
         // Getters and Setters -> Last Name
-
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
     public String getLastName() {
         return lastName;
     }
 
         // Getters and Setters -> Flight Number
-
     public void setFlightNumber(int flightNumber){
         this.flightNumber = flightNumber;
     }
-
-    public double getFlightNumber() {
+    public int getFlightNumber() {
         return flightNumber;
     }
 
         // Getters and Setters -> Seat Number
-
     public void setSeatNumber(int seatNumber) {
         this.seatNumber = seatNumber;
     }
-
     public int getSeatNumber(){
         return seatNumber;
     }
 
             // Getters and Setters -> Ticket Number
-
     public void setTicketNumber(int ticketNumber) {
         this.ticketNumber = ticketNumber;
     }
-
     public int getTicketNumber(){
         return ticketNumber;
     }
+
         // Method Get Letter grade - Ranked grade A-F
 
-    public String retrieveSeatingClass (){          
-           
+    public String retrieveSeatingClass (){             
         String seatingClass;
-
         switch(this.seatNumber){
             case 1:
             case 2:
@@ -101,33 +90,53 @@ public class AirlineReservation {
                 seatingClass = "Fourth Class"; 
                 break;
             default:
-                seatingClass = "Invalid";
+                seatingClass = "Economy Class";
             }
-
             return seatingClass;
     }
-
 
             //
             // Challenge 2
             // 
 
-    // Challenge 2: Method called “checkNoFlyList” to check passenger     
+    // Method called “checkNoFlyList” to check passenger     
 
     public String checkNoFlyList(){
-
         String passengerKeyCode = firstName + lastName;
         String [] passengersList = {"Jack Blue", "Jack Green", "Jill White"};
-        String returnValue = "";
+        String returnValue = "0000";
 
         for (int i=0; i< passengersList.length; i++){
 
-            if (passengerKeyCode.equalsIgnoreCase(passengersList[i].strip())){
+            if (passengerKeyCode.equalsIgnoreCase(passengersList[i].replaceAll(" ", ""))){
                 returnValue = "9999";
-            } else {
-                returnValue = "0000";
+
             }
         }
+
+        if(returnValue.equals("9999")) {
+            System.out.println("ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT");    
+          } else {
+            System.out.println("--- OK TO GO!");      
+          }
         return returnValue;
+    }
+
+            //
+            // Challenge 3
+            // 
+
+    // Challenge 3: Method called “checkNoFlyList” to check passenger
+
+    public String segmentState(){
+        String fullyString = firstName + lastName + flightNumber + seatNumber + ticketNumber;
+
+        String firstNumber = Integer.toString(ticketNumber);
+
+        int index1 = Character.getNumericValue(firstNumber.charAt(0));
+        int index2 = Character.getNumericValue(firstNumber.charAt(firstNumber.length()-1));
+
+        return fullyString.substring(index1, index2);        
+    
     }
 }
