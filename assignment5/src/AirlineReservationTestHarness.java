@@ -61,18 +61,18 @@ public class AirlineReservationTestHarness {                                    
 
                 // Register Flight Number
         System.out.print("Enter Flight Number: ");                                           // Display appropriate messa to user
-        int flightNumber= sc.nextInt();                                                        // Input to grade course one
-        ar2.setFlightNumber(flightNumber);                                                     // Set method to save typed grade course one
+        int flightNumber= sc.nextInt();                                                        // Input to Flight Number
+        ar2.setFlightNumber(flightNumber);                                                     // Set method to save typed Flight Number
                 
                 // Register Seat Number
         System.out.print("Enter Seat Number: ");                                             // Display appropriate messa to user
-        int seatNumber= sc.nextInt();                                                          // Input to grade course one
-        ar2.setSeatNumber(seatNumber); 
+        int seatNumber= sc.nextInt();                                                          // Input to Seat Number
+        ar2.setSeatNumber(seatNumber);                                                         // Set method to save typed Seat Number
                 
                 // Register Flight Number
         System.out.print("Enter Ticket Number: ");                                            // Display appropriate messa to user
         int ticketNumber= sc.nextInt();                                                         // Input to grade course one
-        ar2.setTicketNumber(ticketNumber);         
+        ar2.setTicketNumber(ticketNumber);                                                      // Set method to save typed Ticket Number
 
 
         System.out.println();                                                                   // Jumping line - better visualization
@@ -85,19 +85,19 @@ public class AirlineReservationTestHarness {                                    
         System.out.println("--- " +"Seating Class: " + ar2.retrieveSeatingClass());             // Print Seating Class
         System.out.println("--- " +"Segment State: " + ar2.segmentState());                     // Print Segment State       
         System.out.println("\n----------------------------");                                // Jumping line  and printing a bar to better visualization
-        System.out.println("--- " +"No Fly List: " + ar2.checkNoFlyList());   
+        System.out.println("--- " +"No Fly List: " + ar2.checkNoFlyList());                     // Print No Fly check
         
-        if(ar2.checkNoFlyList().contains("9999")) {
-          System.out.println("ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT");    
-        } else {
-          System.out.println("--- OK TO GO!");      
+                // Print the checking No Fly List
+        if(ar2.checkNoFlyList().contains("9999")) {                                          // If state to check No List
+          System.out.println("ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT");       // Print Alert
+        } else {                                                                               // Else state to No Fly check
+          System.out.println("--- OK TO GO!");                                               // Print No Fly check
         }
 
-                  // Print the checking No Fly List
-        System.out.println("\n----------------------------");  
+        System.out.println("\n----------------------------");                                // Jumping line - better visualization
 
 
-        sc.close();
+        sc.close();                                                                             // Close Scanner
   }
 }
 
