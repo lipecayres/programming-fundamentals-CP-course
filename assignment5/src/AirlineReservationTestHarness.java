@@ -65,13 +65,13 @@ public class AirlineReservationTestHarness {                                    
         ar2.setFlightNumber(flightNumber);                                                     // Set method to save typed grade course one
                 
                 // Register Seat Number
-        System.out.print("Enter Seat Number: ");                                                    // Display appropriate messa to user
-        int seatNumber= sc.nextInt();                                                 // Input to grade course one
+        System.out.print("Enter Seat Number: ");                                             // Display appropriate messa to user
+        int seatNumber= sc.nextInt();                                                          // Input to grade course one
         ar2.setSeatNumber(seatNumber); 
                 
                 // Register Flight Number
-        System.out.print("Enter Ticket Number: ");                                                    // Display appropriate messa to user
-        int ticketNumber= sc.nextInt();                                                 // Input to grade course one
+        System.out.print("Enter Ticket Number: ");                                            // Display appropriate messa to user
+        int ticketNumber= sc.nextInt();                                                         // Input to grade course one
         ar2.setTicketNumber(ticketNumber);         
 
 
@@ -79,11 +79,11 @@ public class AirlineReservationTestHarness {                                    
         System.out.println("Airline Reservation Informations");                              // Print "example" title to user        
         System.out.println("--- " + "First Name: " + ar2.getFirstName());                       // Print First Name     
         System.out.println("--- " +"Last Name: " + ar2.getLastName());                          // Print Last Name
-        System.out.println("--- " +"Flight Number: " + ar2.getFlightNumber());                  // Print Student ID
-        System.out.println("--- " +"Seat Number: " + ar2.getSeatNumber());                      // Print Grade Letter One
-        System.out.println("--- " +"Ticket Number: " + ar2.getTicketNumber());                  // Print Letter Grade
-        System.out.println("--- " +"Seating Class: " + ar2.retrieveSeatingClass());             // Print Letter Grade
-        System.out.println("--- " +"Segment State: " + ar2.segmentState());                   // Print Letter Grade        
+        System.out.println("--- " +"Flight Number: " + ar2.getFlightNumber());                  // Print Flight Number
+        System.out.println("--- " +"Seat Number: " + ar2.getSeatNumber());                      // Print Seat Number
+        System.out.println("--- " +"Ticket Number: " + ar2.getTicketNumber());                  // Print Ticket Number
+        System.out.println("--- " +"Seating Class: " + ar2.retrieveSeatingClass());             // Print Seating Class
+        System.out.println("--- " +"Segment State: " + ar2.segmentState());                     // Print Segment State       
         System.out.println("\n----------------------------");                                // Jumping line  and printing a bar to better visualization
         System.out.println("--- " +"No Fly List: " + ar2.checkNoFlyList());   
         
@@ -93,6 +93,11 @@ public class AirlineReservationTestHarness {                                    
           System.out.println("--- OK TO GO!");      
         }
 
+                  // Print the checking No Fly List
+        System.out.println("\n----------------------------");  
+
+
         sc.close();
   }
 }
+
