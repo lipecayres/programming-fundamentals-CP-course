@@ -114,11 +114,6 @@ public class AirlineReservation {
             }
         }
 
-        if(returnValue.equals("9999")) {
-            System.out.println("ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT ALERT");    
-          } else {
-            System.out.println("--- OK TO GO!");      
-          }
         return returnValue;
     }
 
