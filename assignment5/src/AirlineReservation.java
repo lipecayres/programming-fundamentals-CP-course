@@ -112,5 +112,22 @@ public class AirlineReservation {
             // Challenge 2
             // 
 
-   
+    // Challenge 2: Method called “checkNoFlyList” to check passenger     
+
+    public String checkNoFlyList(){
+
+        String passengerKeyCode = firstName + lastName;
+        String [] passengersList = {"Jack Blue", "Jack Green", "Jill White"};
+        String returnValue = "";
+
+        for (int i=0; i< passengersList.length; i++){
+
+            if (passengerKeyCode.equalsIgnoreCase(passengersList[i].strip())){
+                returnValue = "9999";
+            } else {
+                returnValue = "0000";
+            }
+        }
+        return returnValue;
+    }
 }
