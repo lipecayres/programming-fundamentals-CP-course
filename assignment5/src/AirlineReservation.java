@@ -68,7 +68,7 @@ public class AirlineReservation {
         return ticketNumber;
     }
 
-        // Method Get Letter grade - Ranked grade A-F
+        // Method Retrieve Seating Class
 
     public String retrieveSeatingClass (){             
         String seatingClass;
