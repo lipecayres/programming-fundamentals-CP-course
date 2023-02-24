@@ -70,72 +70,44 @@ public class MovieTicket {
             }
         }
 
+        // Method Calculate Tax
 
-
-        // Method Retrieve Seating Class
-
-    public String retrieveSeatingClass (){             
-        String seatingClass;
-        switch(this.theatreNumber){
-            case 1:
-            case 2:
-                seatingClass = "First Class"; 
-                break;
-            case 3:
-            case 4:
-                seatingClass = "Second Class"; 
-                break;
-            case 5:
-            case 6:
-                seatingClass = "Third Class"; 
-                break;
-            case 7:
-            case 8:
-                seatingClass = "Fourth Class"; 
-                break;
-            default:
-                seatingClass = "Economy Class";
-            }
-            return seatingClass;
-    }
-
-            //
-            // Challenge 2
-            // 
-
-    // Method called “checkNoFlyList” to check passenger     
-
-    public String checkNoFlyList(){
-        String passengerKeyCode = movieName + lastName;
-        String [] passengersList = {"Jack Blue", "Jack Green", "Jill White"};
-        String returnValue = "0000";
-
-        for (int i=0; i< passengersList.length; i++){
-
-            if (passengerKeyCode.equalsIgnoreCase(passengersList[i].replaceAll(" ", ""))){
-                returnValue = "9999";
-
-            }
+        public static double getPriceAfterTax (){
+            double tax = 0.13;
+            return MovieTicket.ticketPrice * tax;
+   
         }
 
-        return returnValue;
-    }
-
-            //
-            // Challenge 3
-            // 
-
-    // Challenge 3: Method called “checkNoFlyList” to check passenger
-
-    public String segmentState(){
-        String fullyString = movieName + lastName + flightNumber + theatreNumber + ticketNumber;
-
-        String firstNumber = Integer.toString(ticketNumber);
-
-        int index1 = Character.getNumericValue(firstNumber.charAt(0));
-        int index2 = Character.getNumericValue(firstNumber.charAt(firstNumber.length()-1));
-
-        return fullyString.substring(index1, index2);        
-    
-    }
-}
+        // Overloaded Method 
+        
+        public String inquireMovieRunDates(String movie) {
+            
+            switch(movie){
+                case "Die Hard 1":
+                    return movie + ": Jan 1, Jan 2, Jan 3";
+                case "Die Hard 2":
+                    return movie + ": Jan 4, Jan 5, Jan 6";
+                case "Die Hard 3":
+                    return movie + ": Jan 7, Jan 8, Jan 9";
+                case "Die Hard 4":
+                    return movie + ": Jan 10, Jan 11, Jan 12";
+                default:
+                    return "Invalid movie";
+                }
+            }
+        
+            public String inquireMovieRunDates(int ticket) {
+            
+                switch(ticket){
+                    case 12345:
+                        return ticket + ": Jan 1, Jan 2, Jan 3";
+                    case 12346:
+                        return ticket + ": Jan 4, Jan 5, Jan 6";
+                    case 12347:
+                        return ticket + ": Jan 7, Jan 8, Jan 9";
+                    case 12348:
+                        return ticket + ": Jan 10, Jan 11, Jan 12";
+                    default:
+                        return "Invalid ticket";
+                    }
+                }
