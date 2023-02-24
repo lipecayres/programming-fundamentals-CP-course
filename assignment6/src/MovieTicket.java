@@ -12,6 +12,7 @@ public class MovieTicket {
     private String movieName;
     private int ticketNumber;
     private int theatreNumber;
+
     public static double ticketPrice;
 
     int flightNumber;
@@ -21,11 +22,10 @@ public class MovieTicket {
     public MovieTicket () {}
 
         // Constructor declaration with arguments 
-    public MovieTicket (String movieName, int ticketNumber, int theatreNumber, double ticketPrice) {
+    public MovieTicket (String movieName, int ticketNumber, int theatreNumber) {
         this.movieName = movieName;
         this.ticketNumber = ticketNumber;
         this.theatreNumber = theatreNumber;
-
     }
 
         // Getters and Setters -> Movie Name
@@ -35,7 +35,6 @@ public class MovieTicket {
     public String getMovieName(){
         return movieName;
     }
-
 
         // Getters and Setters -> Flight Number
     public void setFlightNumber(int flightNumber){
@@ -52,6 +51,25 @@ public class MovieTicket {
     public int getTheatreNumber(){
         return theatreNumber;
     }
+
+
+        // Method Check Palindrome
+
+        public boolean checkPalindrom () {
+            this.movieName = movieName.toLowerCase().replaceAll(" ", "");
+            String invertedName = "";
+            
+            for (int i = movieName.length()-1; i<=0; i--) {
+                invertedName += this.movieName.charAt(i);
+            }
+
+            if (invertedName.equals(movieName)){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
 
 
         // Method Retrieve Seating Class
