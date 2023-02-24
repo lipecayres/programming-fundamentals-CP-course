@@ -21,30 +21,21 @@ public class MovieTicket {
     public MovieTicket () {}
 
         // Constructor declaration with arguments 
-    public MovieTicket (String movieName, String lastName, int flightNumber, int theatreNumber, int ticketNumber) {
+    public MovieTicket (String movieName, int ticketNumber, int theatreNumber, double ticketPrice) {
         this.movieName = movieName;
-        this.lastName = lastName;
-        this.flightNumber = flightNumber;
+        this.ticketNumber = ticketNumber;
         this.theatreNumber = theatreNumber;
-        this.ticketNumber = ticketNumber;           
 
     }
 
-        // Getters and Setters -> First Name
-    public void setmovieName(String movieName) {
+        // Getters and Setters -> Movie Name
+    public void setMovieName(String movieName) {
         this.movieName = movieName;
     }
-    public String getmovieName(){
+    public String getMovieName(){
         return movieName;
     }
 
-        // Getters and Setters -> Last Name
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-    public String getLastName() {
-        return lastName;
-    }
 
         // Getters and Setters -> Flight Number
     public void setFlightNumber(int flightNumber){
@@ -54,21 +45,14 @@ public class MovieTicket {
         return flightNumber;
     }
 
-        // Getters and Setters -> Seat Number
-    public void settheatreNumber(int theatreNumber) {
+        // Getters and Setters -> Theatre Number
+    public void setTheatreNumber(int theatreNumber) {
         this.theatreNumber = theatreNumber;
     }
-    public int gettheatreNumber(){
+    public int getTheatreNumber(){
         return theatreNumber;
     }
 
-            // Getters and Setters -> Ticket Number
-    public void setTicketNumber(int ticketNumber) {
-        this.ticketNumber = ticketNumber;
-    }
-    public int getTicketNumber(){
-        return ticketNumber;
-    }
 
         // Method Retrieve Seating Class
 
