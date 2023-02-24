@@ -13,7 +13,7 @@ public class MovieTicket {
     private int ticketNumber;
     private int theatreNumber;
 
-    public static double ticketPrice;
+    public static double ticketPrice = 50.0;
 
     int flightNumber;
 
@@ -58,7 +58,7 @@ public class MovieTicket {
         public boolean checkPalindrom () {
             this.movieName = movieName.toLowerCase().replaceAll(" ", "");
             String invertedName = "";
-            
+
             for (int i = movieName.length()-1; i<=0; i--) {
                 invertedName += this.movieName.charAt(i);
             }
