@@ -10,20 +10,22 @@ public class MovieTicket {
         // Variables
 
     private String movieName;
-    private String lastName;
-    private int flightNumber;
-    private int seatNumber;
     private int ticketNumber;
+    private int theatreNumber;
+    public static double ticketPrice;
+
+    int flightNumber;
+
 
         // Declaring empty constructor
     public MovieTicket () {}
 
         // Constructor declaration with arguments 
-    public MovieTicket (String movieName, String lastName, int flightNumber, int seatNumber, int ticketNumber) {
+    public MovieTicket (String movieName, String lastName, int flightNumber, int theatreNumber, int ticketNumber) {
         this.movieName = movieName;
         this.lastName = lastName;
         this.flightNumber = flightNumber;
-        this.seatNumber = seatNumber;
+        this.theatreNumber = theatreNumber;
         this.ticketNumber = ticketNumber;           
 
     }
@@ -53,11 +55,11 @@ public class MovieTicket {
     }
 
         // Getters and Setters -> Seat Number
-    public void setSeatNumber(int seatNumber) {
-        this.seatNumber = seatNumber;
+    public void settheatreNumber(int theatreNumber) {
+        this.theatreNumber = theatreNumber;
     }
-    public int getSeatNumber(){
-        return seatNumber;
+    public int gettheatreNumber(){
+        return theatreNumber;
     }
 
             // Getters and Setters -> Ticket Number
@@ -72,7 +74,7 @@ public class MovieTicket {
 
     public String retrieveSeatingClass (){             
         String seatingClass;
-        switch(this.seatNumber){
+        switch(this.theatreNumber){
             case 1:
             case 2:
                 seatingClass = "First Class"; 
@@ -124,7 +126,7 @@ public class MovieTicket {
     // Challenge 3: Method called “checkNoFlyList” to check passenger
 
     public String segmentState(){
-        String fullyString = movieName + lastName + flightNumber + seatNumber + ticketNumber;
+        String fullyString = movieName + lastName + flightNumber + theatreNumber + ticketNumber;
 
         String firstNumber = Integer.toString(ticketNumber);
 
