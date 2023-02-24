@@ -52,18 +52,18 @@ public class MovieTicket {
 
         // Method Check Palindrome
 
-        public boolean checkPalindrom () {
+        public String checkPalindrom () {
             this.movieName = movieName.toLowerCase().replaceAll(" ", "");
-            String invertedName = "";
 
-            for (int i = movieName.length()-1; i<=0; i--) {
-                invertedName += this.movieName.charAt(i);
+            String reverse = "";
+            for (int i = movieName.length()-1; i>=0; i--) {
+                reverse += (this.movieName).charAt(i);
             }
 
-            if (invertedName.equals(movieName)){
-                return true;
+            if (reverse.equalsIgnoreCase(this.movieName)){
+                return "Yes, the movie name is palindrom";
             } else {
-                return false;
+                return "No, the movie name is not palindrom";
             }
         }
 
@@ -71,7 +71,7 @@ public class MovieTicket {
 
         public static double getPriceAfterTax (){
             double tax = 0.13;
-            return MovieTicket.ticketPrice * tax;
+            return MovieTicket.ticketPrice + (MovieTicket.ticketPrice * tax);
    
         }
 
@@ -93,19 +93,19 @@ public class MovieTicket {
                 }
             }
         
-            public String inquireMovieRunDates(int ticket) {
-            
-                switch(ticket){
-                    case 12345:
-                        return ticket + ": Jan 1, Jan 2, Jan 3";
-                    case 12346:
-                        return ticket + ": Jan 4, Jan 5, Jan 6";
-                    case 12347:
-                        return ticket + ": Jan 7, Jan 8, Jan 9";
-                    case 12348:
-                        return ticket + ": Jan 10, Jan 11, Jan 12";
-                    default:
-                        return "Invalid ticket";
-                    }
+        public String inquireMovieRunDates(int ticket) {
+        
+            switch(ticket){
+                case 12345:
+                    return ticket + ": Jan 1, Jan 2, Jan 3";
+                case 12346:
+                    return ticket + ": Jan 4, Jan 5, Jan 6";
+                case 12347:
+                    return ticket + ": Jan 7, Jan 8, Jan 9";
+                case 12348:
+                    return ticket + ": Jan 10, Jan 11, Jan 12";
+                default:
+                    return "Invalid ticket";
                 }
+            }
     }
