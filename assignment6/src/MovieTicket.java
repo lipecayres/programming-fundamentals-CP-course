@@ -9,7 +9,7 @@ public class MovieTicket {
 
         // Variables
 
-    private String firstName;
+    private String movieName;
     private String lastName;
     private int flightNumber;
     private int seatNumber;
@@ -19,8 +19,8 @@ public class MovieTicket {
     public MovieTicket () {}
 
         // Constructor declaration with arguments 
-    public MovieTicket (String firstName, String lastName, int flightNumber, int seatNumber, int ticketNumber) {
-        this.firstName = firstName;
+    public MovieTicket (String movieName, String lastName, int flightNumber, int seatNumber, int ticketNumber) {
+        this.movieName = movieName;
         this.lastName = lastName;
         this.flightNumber = flightNumber;
         this.seatNumber = seatNumber;
@@ -29,11 +29,11 @@ public class MovieTicket {
     }
 
         // Getters and Setters -> First Name
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setmovieName(String movieName) {
+        this.movieName = movieName;
     }
-    public String getFirstName(){
-        return firstName;
+    public String getmovieName(){
+        return movieName;
     }
 
         // Getters and Setters -> Last Name
@@ -102,7 +102,7 @@ public class MovieTicket {
     // Method called “checkNoFlyList” to check passenger     
 
     public String checkNoFlyList(){
-        String passengerKeyCode = firstName + lastName;
+        String passengerKeyCode = movieName + lastName;
         String [] passengersList = {"Jack Blue", "Jack Green", "Jill White"};
         String returnValue = "0000";
 
@@ -124,7 +124,7 @@ public class MovieTicket {
     // Challenge 3: Method called “checkNoFlyList” to check passenger
 
     public String segmentState(){
-        String fullyString = firstName + lastName + flightNumber + seatNumber + ticketNumber;
+        String fullyString = movieName + lastName + flightNumber + seatNumber + ticketNumber;
 
         String firstNumber = Integer.toString(ticketNumber);
 
