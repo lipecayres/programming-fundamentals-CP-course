@@ -15,9 +15,6 @@ public class MovieTicket {
 
     public static double ticketPrice = 50.0;
 
-    int flightNumber;
-
-
         // Declaring empty constructor
     public MovieTicket () {}
 
@@ -37,11 +34,11 @@ public class MovieTicket {
     }
 
         // Getters and Setters -> Flight Number
-    public void setFlightNumber(int flightNumber){
-        this.flightNumber = flightNumber;
+    public void setTicketNumber(int ticketNumber){
+        this.ticketNumber = ticketNumber;
     }
-    public int getFlightNumber() {
-        return flightNumber;
+    public int getTicketNumber() {
+        return ticketNumber;
     }
 
         // Getters and Setters -> Theatre Number
@@ -111,3 +108,4 @@ public class MovieTicket {
                         return "Invalid ticket";
                     }
                 }
+    }
