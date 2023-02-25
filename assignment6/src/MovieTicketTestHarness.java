@@ -41,7 +41,7 @@ public class MovieTicketTestHarness {                                           
         System.out.println("--- " +"Theatre Number: " + mt1.getTheatreNumber());                // Print Theatre Number
  
                 // Display Prices
-        System.out.println("\n--- " + "Price: $" + MovieTicket.ticketPrice);                           // Print Price before tax
+        System.out.printf("\n--- " + "Price: $%.2f\n", MovieTicket.ticketPrice);                           // Print Price before tax
         System.out.printf("--- " + "Price after tax: $%.2f\n", MovieTicket.getPriceAfterTax());         // Print Price after tax
 
                 //BUG FIX
