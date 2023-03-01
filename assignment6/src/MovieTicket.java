@@ -81,15 +81,15 @@ public class MovieTicket {
             
             switch(movie){
                 case "Die Hard 1":
-                    return "Movie: " + movie + ": Jan 1, Jan 2, Jan 3";
+                    return movie + ": Jan 1, Jan 2, Jan 3";
                 case "Die Hard 2":
-                    return "Movie: " + movie + ": Jan 4, Jan 5, Jan 6";
+                    return movie + ": Jan 4, Jan 5, Jan 6";
                 case "Die Hard 3":
-                    return "Movie: " + movie + ": Jan 7, Jan 8, Jan 9";
+                    return movie + ": Jan 7, Jan 8, Jan 9";
                 case "Die Hard 4":
-                    return "Movie: " + movie + ": Jan 10, Jan 11, Jan 12";
+                    return movie + ": Jan 10, Jan 11, Jan 12";
                 default:
-                    return "Movie " + movie + " is invalid.";
+                    return movie + " is invalid.";
                 }
             }
         
@@ -97,13 +97,13 @@ public class MovieTicket {
         
             switch(ticket){
                 case 12345:
-                    return "Ticket: " + ticket + ": Jan 1, Jan 2, Jan 3";
+                    return "Ticket " + ticket + ": Jan 1, Jan 2, Jan 3";
                 case 12346:
-                    return "Ticket: " + ticket + ": Jan 4, Jan 5, Jan 6";
+                    return "Ticket " + ticket + ": Jan 4, Jan 5, Jan 6";
                 case 12347:
-                    return "Ticket: " + ticket + ": Jan 7, Jan 8, Jan 9";
+                    return "Ticket " + ticket + ": Jan 7, Jan 8, Jan 9";
                 case 12348:
-                    return "Ticket: " + ticket + ": Jan 10, Jan 11, Jan 12";
+                    return "Ticket " + ticket + ": Jan 10, Jan 11, Jan 12";
                 default:
                     return "Ticket " + ticket + " is invalid.";
                 }
