@@ -29,6 +29,14 @@ public class BankTransactionRecordTestHarness{
                 account[i].setTransactionReferenceNumber(transactionReferenceNumber);
         }
 
+        for (int i=0; i<500; i++){
+                System.out.println("--- " + "Canadian Funds: " + account[i].getCanadianFunds());     
+                System.out.println("--- " +"Exchange Rate: " + account[i].getExchangeRate());
+                System.out.println("--- " +"Transaction Number: " + account[i].getTransactionNumber());
+                System.out.println("--- " +"Transaction Reference Number: " + account[i].getTransactionReferenceNumber());
+                System.out.println("\n-----------------------\n");
+
+        }
 
     }
 }
