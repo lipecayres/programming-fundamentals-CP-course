@@ -7,7 +7,7 @@
 // Import statements:
 public class BankTransactionRecordTestHarness{
     public static void main (String [] args) {
-          // Instantiate ticket.
+          // Instantiate Bank Accounts.
         BankTransaction mt1 = new BankTransaction();   
 
 
