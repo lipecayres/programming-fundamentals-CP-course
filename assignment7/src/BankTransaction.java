@@ -13,7 +13,7 @@ public class BankTransaction {
     private double exchangeRate;
     private int transactionNumber;
     private long transactionReferenceNumber;
-
+    public static int numTransactions;
 
         // Declaring empty constructor
     public BankTransaction () {}
