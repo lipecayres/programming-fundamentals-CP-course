@@ -42,5 +42,39 @@ public class BankTransactionRecordTestHarness{
                 System.out.println("\n-----------------------\n");
 
         }
+        // Ask the user for the data 
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Go to second step?");
+        System.out.print("Yes or no?: ")  ;
+        String secondStep= sc.nextLine(); 
+        secondStep.toLowerCase();  
 
+        if ((secondStep).equals("yes")) {
+
+                for (int i = 0; i<account.length;i++){
+         
+                         account[i].setCanadianFunds(false);
+                         account[i].setExchangeRate(0);
+                         account[i].setTransactionNumber(0);
+                         account[i].setTransactionReferenceNumber(0);
+                 }   
+                 
+                 for (int i=0; i<accountQuantity; i++){
+                        System.out.println("--- " + "Canadian Funds: " + account[i].getCanadianFunds());     
+                        System.out.println("--- " +"Exchange Rate: " + account[i].getExchangeRate());
+                        System.out.println("--- " +"Transaction Number: " + account[i].getTransactionNumber());
+                        System.out.println("--- " +"Transaction Reference Number: " + account[i].getTransactionReferenceNumber());
+                        System.out.println("\n-----------------------\n");
+                 }
+
+        } else if ((secondStep).equals("no")) {
+                System.exit(0);
+        } else {
+                System.out.println("Invalid input. Type yes or no");
+                secondStep= sc.nextLine();   
+
+        }
+
+        sc.close();
+    }
 }
