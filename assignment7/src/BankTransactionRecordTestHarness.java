@@ -3,33 +3,38 @@
 *	Date: Mar 15th, 2023
 *	Time: 08:50 AM
 */
-import java.util.Random;
 
 // Import statements:
+import java.util.Random;
+import java.util.Scanner;
+
+
 public class BankTransactionRecordTestHarness{
-    public static void main (String [] args) {
-        Random random = new Random();
+	public static void main (String [] args) {
 
-          // Instantiate Bank Accounts.
-        BankTransaction[] account = new BankTransaction[500];   
+	Random random = new Random();
 
-        System.out.println("\nBank Account Informations\n-----------------------");  
+	int accountQuantity = 500;
+		// Instantiate Bank Accounts.
+	BankTransaction[] account = new BankTransaction[accountQuantity];   
 
-        for (int i = 0; i<account.length;i++){
-               boolean canadianFunds = random.nextBoolean();
-               double exchangeRate = random.nextDouble();
-               int transactionNumber = random.nextInt();
-               long transactionReferenceNumber = random.nextLong();
-               
-                account[i] = new BankTransaction(canadianFunds, exchangeRate, transactionNumber, transactionReferenceNumber);
+	System.out.println("\nBank Account Informations\n-----------------------");  
 
-                account[i].setCanadianFunds(canadianFunds);
-                account[i].setExchangeRate(exchangeRate);
-                account[i].setTransactionNumber(transactionNumber);
-                account[i].setTransactionReferenceNumber(transactionReferenceNumber);
-        }
+	for (int i = 0; i<account.length;i++){
+			boolean canadianFunds = random.nextBoolean();
+			double exchangeRate = random.nextDouble();
+			int transactionNumber = random.nextInt();
+			long transactionReferenceNumber = random.nextLong();
+			
+			account[i] = new BankTransaction(canadianFunds, exchangeRate, transactionNumber, transactionReferenceNumber);
 
-        for (int i=0; i<500; i++){
+			account[i].setCanadianFunds(canadianFunds);
+			account[i].setExchangeRate(exchangeRate);
+			account[i].setTransactionNumber(transactionNumber);
+			account[i].setTransactionReferenceNumber(transactionReferenceNumber);
+	}
+
+        for (int i=0; i<accountQuantity; i++){
                 System.out.println("--- " + "Canadian Funds: " + account[i].getCanadianFunds());     
                 System.out.println("--- " +"Exchange Rate: " + account[i].getExchangeRate());
                 System.out.println("--- " +"Transaction Number: " + account[i].getTransactionNumber());
@@ -38,6 +43,4 @@ public class BankTransactionRecordTestHarness{
 
         }
 
-    }
 }
-
