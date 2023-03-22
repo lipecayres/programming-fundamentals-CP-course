@@ -27,10 +27,10 @@ public class CollegeCourse {
     }
 
         // Getters and Setters -> Course Number
-    public void setExchangeRate(int courseNumber){
+    public void setCourseNumber(int courseNumber){
         this.courseNumber = courseNumber;
     }
-    public int getExchangeRate() {
+    public int getCourseNumber() {
         return courseNumber;
     }
 
