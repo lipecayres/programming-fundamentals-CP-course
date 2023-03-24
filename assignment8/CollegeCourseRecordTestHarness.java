@@ -1,7 +1,7 @@
 /**	Application Purpose: Build the main method to give the JRE an entry point into the College Course.  
 *	Author: Felipe Cayres
-*	Date: Mar 21st, 2023
-*	Time: 02:50 PM
+*	Date: Mar 23st, 2023
+*	Time: 11:30 PM
 */
 
 import java.util.Random;
@@ -10,16 +10,20 @@ import java.util.Scanner;
 public class CollegeCourseRecordTestHarness{
 	public static void main (String [] args) {
 
+		// variables
 		int row = 200, columns = 10, counter = 0; 
+		
+		// array with generic 5 digits codes 
 		int courseCode[] = {11001,12002,13003,14004,15005};
 		
-		Random rand = new Random(); 
+		// initializing objects
+		Random rand = new Random();
 		Scanner sc= new Scanner(System.in);
+		CollegeCourse [][] collegeData = new CollegeCourse[row][columns];
 
 		CollegeCourse cc;
 
-		CollegeCourse [][] collegeData = new CollegeCourse[row][columns];
-
+		// first iteraction - set objects using conditional
 		for (int i = 0; i<row; i++){
 			for (int j = 0; j<columns;j++){
 				counter++; 
@@ -44,7 +48,7 @@ public class CollegeCourseRecordTestHarness{
 
 		System.out.println("\n#### Level 2: ####\n");
 
-		// level 2
+		// second iteraction - set objects using counter and random list
 		counter = 0;
 		for (int i = 0; i<row; i++){
 			for (int j = 0; j<columns;j++){
@@ -62,7 +66,7 @@ public class CollegeCourseRecordTestHarness{
 
 		System.out.println("\n#### Level 3: ####\n");
 
-		// loop to print data
+		// third iteraction - print data
 		for (int i = 0; i<row; i++){
 			for (int j = 0; j<columns;j++){
 
@@ -79,21 +83,25 @@ public class CollegeCourseRecordTestHarness{
 
 		int pickColumn = 0, pickRow = 0;
 
+		//validity row
 		while (pickRow <1 || pickRow > row){
 			System.out.println("Pick row position (between 1 and " + row +").");
 			pickRow= sc.nextInt();
 		}
 
+		//validity column
 		while (pickColumn <1 || pickColumn > columns){
 			System.out.println("Pick column position (between 1 and " + columns +")." );
 			pickColumn = sc.nextInt();;
 		}
 
+		//go to position index		
 		pickRow-=1;
 		pickColumn-=1;
 		
 		String formatted = String.format("%07d", collegeData[pickRow][pickColumn].getCourseReferenceNumber());
 
+		//print state
 		System.out.println("------------------------------");
 		System.out.println("Index: [" + pickRow + "]["+ pickColumn +"]" );
 		System.out.println("Course Reference Number: " + formatted);
