@@ -74,6 +74,32 @@ public class CollegeCourseRecordTestHarness{
 			}
 		}
 
+		// ask user row and columns to print object
+		System.out.println("\n#### Level 4: ####\n");
+
+		int pickColumn = 0, pickRow = 0;
+
+		while (pickRow <1 || pickRow > row){
+			System.out.println("Pick row position (between 1 and " + row +").");
+			pickRow= sc.nextInt();
+		}
+
+		while (pickColumn <1 || pickColumn > columns){
+			System.out.println("Pick column position (between 1 and " + columns +")." );
+			pickColumn = sc.nextInt();;
+		}
+
+		pickRow-=1;
+		pickColumn-=1;
+		
+		String formatted = String.format("%07d", collegeData[pickRow][pickColumn].getCourseReferenceNumber());
+
+		System.out.println("------------------------------");
+		System.out.println("Index: [" + pickRow + "]["+ pickColumn +"]" );
+		System.out.println("Course Reference Number: " + formatted);
+		System.out.println("Course Number: " + collegeData[pickRow][pickColumn].getCourseNumber());
+		System.out.println("------------------------------");
+		sc.close();
 	}	
 
 }
