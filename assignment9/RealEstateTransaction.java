@@ -21,6 +21,43 @@ public class RealEstateTransaction {
         this.streetName = streetName;
         this.city = city;
         this.purchasePrice = purchasePrice;
-        
+
     }
 
+    // getters and setters -> street number
+    public void setStreetNumber(String streetNumber) {
+        this.streetNumber = streetNumber;
+    }
+
+    public String getStreetNumber() {
+        return streetNumber;
+    }
+
+    // getters and setters -> street name
+    public void setStreetName(String streetName) {
+        this.streetName = streetName;
+    }
+
+    public String getStreetName() {
+        return streetName;
+    }
+
+    // getters and setters -> street name
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    // getters and setters -> street name
+    public void setPurchasePrice(String purchasePrice) {
+        this.purchasePrice = purchasePrice;
+    }
+
+    public String getPurchasePrice() {
+        return purchasePrice;
+    }
+
+}
