@@ -19,10 +19,6 @@ public class TestEmployee {
 		// Instantiate Employee object.
 		Employee[] account = new Employee[employeeQuantity];
 
-
-		Employee account2 = new Employee;
-		Employee account3 = new Employee;
-
 		Employee ac = new Employee();
 
 		counter = 1000;
@@ -40,15 +36,13 @@ public class TestEmployee {
 		for (int i = 0; i < account.length; i++) {
 			if (account[i].getSalary() < 1000 && account[i].getIdNumber() % 2 != 0) {
 
-				System.out.println("Salary: $" + account2.getSalary());
+				System.out.println("Salary: $" + account[i].getSalary());
 				System.out.println("Id #: " + account[i].getIdNumber());
 				System.out.println("------------------------------");
 
 			}
 
 		}
-
-		account2.setSalary(1000);
 	}
 
 }
