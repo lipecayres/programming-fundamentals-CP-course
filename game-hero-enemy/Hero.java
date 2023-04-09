@@ -1,3 +1,4 @@
+import java.util.Random;
 
 /**
  * Application Purpose: Build a blueprint hero class - states and behavior
@@ -12,6 +13,9 @@ public class Hero {
     private int hp, defence, power, weapon, potionAmount;
     private boolean shield;
 
+    private final Potions[] potions = new Potions[2];
+
+
     // default constructor
     public Hero() {
     }
@@ -25,6 +29,11 @@ public class Hero {
         this.shield = shield;
         this.potionAmount = potionAmount;
     }
+
+    public Potions[] getPotion() {
+        return potions;
+    }
+
 
     // getters and setters -> hp
     public void setHp(int hp) {
@@ -71,7 +80,7 @@ public class Hero {
         return shield;
     }
 
-    // getters and setters -> shield
+    // getters and setters -> PotionAmount
     public void setPotionAmount(int potionAmount) {
         this.potionAmount = potionAmount;
     }
@@ -82,28 +91,64 @@ public class Hero {
 
     // game methods
 
-    public void attack(Enemy enemy) {
+    private int attack(Enemy enemy) {
 
-        int hpAfterAttack = enemy.getHp() - power - weapon;
+        int hpAfterAttack = enemy.getHp() - power - weapon + enemy.getDefence();
         if (hpAfterAttack < 0) {
             hpAfterAttack = 0;
         }
         enemy.setHp(hpAfterAttack);
+        return hpAfterAttack;
     }
 
-    public void miss() {
-        System.out.println("Missed attack");
+    public int isHit(Enemy enemy) {
+        Random rnd = new Random();
+        int chance = rnd.nextInt(4);
+        if (chance == 0){
+            return -1;
+        }else {
+            return attack(enemy);
+        }
     }
 
     public void useShield() {
         shield = !shield;
     }
 
-    public void drinkPotion(Potions potion) {
-        // get amount of healing of potion class
-        // int hpAfterPotion = hp + potion;
+    public int drinkPotion() {
+        if (potions[0] == null && potions[1] == null){
 
-        // check if maximum hp. 
+            System.out.println("\t  ||You don't have potions         ||");
+            return 1;
+
+        }else {
+            Potions potion = null;
+
+            if(potions[0] != null){
+                potion = potions[0];
+                potions[0] = null;
+            }else if(potions[1] != null) {
+                potion = potions[1];
+                potions[1] = null;
+            }
+
+            switch (potion.getName()){
+                case "Health" ->{
+                    hp += potion.getEffectValue();
+                    System.out.printf("\t  ||Your hp now is %16s||\n", hp);
+                }
+                case "Attack" ->{
+                    weapon += potion.getEffectValue();
+                    System.out.printf("\t  ||Your weapon now is %12s||\n", weapon);
+                }
+                case "Defense" ->{
+                    defence += potion.getEffectValue();
+                    System.out.printf("\t  ||Your defence now is %11s||\n", defence);
+                }
+            }
+        }
+        return 0;
+
     }
 
     public void getDamage(int damage) {
@@ -115,9 +160,19 @@ public class Hero {
     }
 
     public void buyPotion(Potions potion) {
-        // select potion
+        int newHp = hp - potion.getPrice();
+        if(newHp < 0){
+            System.out.println("\t  ||You can't but potion            ||");
+        }else {
+            hp = newHp;
+            System.out.printf("\t  ||Your hp now is %16s||\n", hp);
+            if(potions[0] == null){
+                potions[0] = potion;
+            }else {
+                potions[1] = potion;
+            }
+        }
 
-        // store;
     }
 
 }
