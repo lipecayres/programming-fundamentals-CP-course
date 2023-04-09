@@ -2,21 +2,25 @@ import java.util.Random;
 
 public class Potions {
     private String name;
-    private String effect;
     private int effectValue;
+    private int price;
 
-    public Potions(String name, String effect, int effectValue) {
+    public Potions(String name, int effectValue, int price) {
         this.name = name;
-        this.effect = effect;
         this.effectValue = effectValue;
+        this.price = price;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public String getName() {
         return name;
-    }
-
-    public String getEffect() {
-        return effect;
     }
 
     public int getEffectValue() {
@@ -27,35 +31,24 @@ public class Potions {
         this.name = name;
     }
 
-    public void setEffect(String effect) {
-        this.effect = effect;
+    public void setEffectValue(int effectValue) {
+        this.effectValue = effectValue;
     }
 
-    public void modifyHero() {
+    public static Potions[] generatePotions() {
+
+        Potions[] potions = new Potions[3];
+        Random rnd = new Random();
         // array of potion names and effect values
-        String[] potionNames = { "Attack Potion", "Defense Potion", "Health Potion" };
-        int[] effectValues = { 10, 5, 20 };
+        String[] potionNames = { "Attack", "Defense", "Health" };
+        int[] effectValues = { 50, 70, 100 };
+        int[] priceValues = { 150, 100, 200 };
 
-        String x;
-        int y;
-
-        Random rand = new Random();
-
-        int randomNumber = rand.nextInt(3);
-
-        switch(randomNumber){
-        case 0:
-            x = potionNames[0];
-            y = effectValues[0];
-            break;
-        case 1:
-            x= potionNames[1];
-            y= effectValues[1];
-            break;
-        case 2:
-            x = potionNames[2];
-            y = effectValues[2];
-            break;   
+        for (int i = 0; i < potions.length; i++) {
+            potions[i] = new Potions(potionNames[rnd.nextInt(3)], effectValues[rnd.nextInt(3)], priceValues[rnd.nextInt(3)]);
         }
+
+        return potions;
     }
 }
+
