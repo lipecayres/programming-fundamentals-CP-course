@@ -1,3 +1,4 @@
+import java.util.Random;
 
 public class Enemy {
     private int hp; // health points
@@ -55,32 +56,49 @@ public class Enemy {
     }
 
     // First public method to attack
-    public void Attack(Hero hero) {
+    private int attack(Hero hero) {
 
-        int hpAfterAttack = hero.getHp() - power; // the power come from where?
-    
+        int hpAfterAttack = hero.getHp() - power + hero.getDefence();
+
 
         if (hpAfterAttack < 0) {
             hpAfterAttack = 0;
         }
 
         hero.setHp(hpAfterAttack);
+        return hpAfterAttack;
     }
 
     // Second public method miss
-    public void miss() {
-        System.out.println("Missed attack");
+    public int isHit(Hero hero) {
+        Random rnd = new Random();
+        int chance = rnd.nextInt(4);
+        if (chance == 0 || chance == 1){
+            return -1;
+        }else {
+            if(hero.getShield()){
+                System.out.printf("\t  ||Hero reflected attack of %6s||\n", name);
+                return -1;
+            }
+            int chanceOfSpecialAttack = rnd.nextInt(2);
+            if(chanceOfSpecialAttack == 0){
+                System.out.printf("\t  ||%s used special attack     ||\n", name);
+                return specialAttack(hero);
+            }
+            return attack(hero);
+        }
     }
 
-    // third public SpecialAttack class
-    public void SpecialAttack(Hero hero) {
-        int damage = power * 1 - hero.getDefence(); // this number 1 needs to change. I dont know how much would be the
-        
-        // special attack
-        if (damage > 0) {
-            hero.getDamage(damage);
-            // any print here?
+    // third private SpecialAttack class
+    private int specialAttack(Hero hero) {
+        int hpAfterAttack = hero.getHp() + hero.getDefence() - power * 2 ;
+
+        if (hpAfterAttack < 0) {
+            hpAfterAttack = 0;
         }
+
+        hero.setHp(hpAfterAttack);
+        return hpAfterAttack;
     }
 
     // forth public getDamage class
