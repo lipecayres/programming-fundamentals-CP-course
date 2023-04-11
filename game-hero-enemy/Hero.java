@@ -1,11 +1,12 @@
+
 /**
  * Application Purpose: Build the Hero attributes and interactions on game
- * Author: Eduardo, Felipe, Maksim, Pedro, Roman
+ * Author: Eduardo Pio, Felipe, Maksim, Pedro, Roman
  * Date: Apr 04, 2023
  * Time: 5:30 PM
  */
 
-// getting random objetc to this class 
+// getting random objetc to this class
 import java.util.Random;
 
 public class Hero {
@@ -102,7 +103,7 @@ public class Hero {
         return hpAfterAttack;
     }
 
-    // check if hitted
+    // check if hero hit enemy
     public int isHit(Enemy enemy) {
         Random rnd = new Random();
         int chance = rnd.nextInt(4);
@@ -159,7 +160,7 @@ public class Hero {
 
     }
 
-    // adquire new potion
+    // get new potion
     public void buyPotion(Potions potion) {
 
         // obtain new hp after buy potion (pay price)

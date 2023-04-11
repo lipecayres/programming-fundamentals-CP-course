@@ -1,13 +1,14 @@
+
 /**
  * Application Purpose: Built the Enemy attributes to the game
- * Author: Eduardo, Felipe, Maksim, Pedro, Roman
- * Date: April 10, 2023 
- * Time: 00:00
+ * Author: Eduardo Pio, Felipe, Maksim, Pedro, Roman
+ * Date: April 10, 2023
+ * Time: 05:30 PM
  */
 
  import java.util.Random;
-
  public class Enemy {
+     // instance variables
      private int hp; // hp = health points
      private int defence;
      private int power;
@@ -17,7 +18,7 @@
      public Enemy() {
      }
  
-     // Constructor with 4 arguments
+     // default constructor and a parameterized constructor that takes four arguments
      public Enemy(int hp, int defence, int power, String name) {
          this.hp = hp;
          this.defence = defence;
@@ -75,17 +76,18 @@
          hero.setHp(hpAfterAttack);
          return hpAfterAttack;
      }
-     // public method hit
+ 
+     // public method isHit
      public int isHit(Hero hero) {
          // Create a Random object to generate a random integer
          Random rnd = new Random();
          int chance = rnd.nextInt(4); // (4 = 25% for each) between 0 and 3 (inclusive)
  
          // If the random integer is 0 or 1, return -1 (indicates a miss)
-         if (chance == 0 || chance == 1){ // (50% of hit)
+         if (chance == 0 || chance == 1){ // (50% of miss)
              return -1;
          }else {
-         // If the random integer is not 0 or 1, Check if the Hero has a shield
+             // If the random integer is not 0 or 1, Check if the Hero has a shield
              if(hero.getShield()){
                  System.out.printf("\t  ||Hero reflected attack of %6s||\n", name);
                  return -1;
@@ -102,6 +104,7 @@
              return attack(hero);
          }
      }
+ 
      // private Special Attack class
      private int specialAttack(Hero hero) {
  
@@ -112,15 +115,23 @@
          if (hpAfterAttack < 0) {
              hpAfterAttack = 0;
          }
-         // setting new hp to Enemy
+         // setting new hp to the hero
          hero.setHp(hpAfterAttack);
          // Return the remaining HP after the special attack
          return hpAfterAttack;
      }
-     // public method get Damage class
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     
+     // this was an error, we forget to delete this method
      public void getDamage(int damage) {
-         // Calculate the remaining HP of the Hero after taking damage
          hp = damage - hp;
  
      }
  }
+ 

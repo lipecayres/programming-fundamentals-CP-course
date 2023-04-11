@@ -1,28 +1,30 @@
-/*
+
+/**
  * Application Purpose: Create potions class to boost character stats during battles
- * Author: Eduardo, Felipe, Maksim, Pedro, Roman 
+ * Author: Eduardo Pio, Felipe, Maksim, Pedro, Roman
  * Date: Apr 05, 2023
  * Time: 07:05 pm
  */
 
  import java.util.Random;
 
- //Instance variables to store data
+
  public class Potions {
+     //Instance variables to store data
      private String name;
      private int effectValue;
      private int price;
- // constructor to initialize the instance variables with values passed in as parameters
+     // constructor to initialize the instance variables with values passed in as parameters
      public Potions(String name, int effectValue, int price) {
          this.name = name;
          this.effectValue = effectValue;
          this.price = price;
      }
- // getter methods to return values
+     // getter methods to return values
      public int getPrice() {
          return price;
      }
- // setter method to set values
+     // setter methods to set values
      public void setPrice(int price) {
          this.price = price;
      }
@@ -42,11 +44,11 @@
      public void setEffectValue(int effectValue) {
          this.effectValue = effectValue;
      }
- // static method to generate an array of 3 random potions
+     // static method to generate an array of 3 random potions
      public static Potions[] generatePotions() {
  
          Potions[] potions = new Potions[3];// initialize array of 3 potions
-
+ 
          Random rnd = new Random();// initialize a Random object to generate random numbers
          // arrays to store possible potion names, effect values, and price values
          String[] potionNames = { "Attack", "Defense", "Health" };
@@ -57,12 +59,11 @@
              // use the Random object to generate a random index for each array
              // use the index to select a random name, effect value, and price from the arrays
              // use the selected values to create a new Potion object and add it to the potions array
-
-             // generating random potion to hero and adding to  array Potions[].
+ 
+             // generating random potions and adding them to the array Potions[].
              potions[i] = new Potions(potionNames[rnd.nextInt(3)], effectValues[rnd.nextInt(3)], priceValues[rnd.nextInt(3)]);
          }
  
          return potions; // return the array of 3 random potions
      }
  }
- 
